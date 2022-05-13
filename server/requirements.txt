@@ -1,0 +1,9 @@
+Django==4.0.2
+djangorestframework==3.13.1
+psycopg2==2.9.3
+django-cors-headers==3.11.0
+drf-jwt==1.19.2
+requests==2.27.1
+drf-yasg
+bcrypt
+numpy

@@ -1,0 +1,5 @@
+@import url("https://cdn.syncfusion.com/ej2/material.css");
+
+.e-input-group input.e-input, .e-input-group.e-control-wrapper input.e-input {
+        font-size: 16px;
+}

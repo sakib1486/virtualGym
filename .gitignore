@@ -1,0 +1,12 @@
+### macOS ###
+# General
+.DS_Store
+
+# all __pycache__ files
+*.pyc
+
+.vscode
+
+venv/
+
+server/venv/

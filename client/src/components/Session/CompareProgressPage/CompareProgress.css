@@ -1,0 +1,14 @@
+.averages-container {
+  display: grid;
+  grid-auto-columns: 1fr, 1fr;
+  column-gap: 20px;
+  padding-top: 15px;
+}
+
+.current-session-container {
+  grid-column: 1;
+}
+
+.previous-session-container {
+  grid-column: 2;
+}

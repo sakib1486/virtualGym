@@ -1,0 +1,9 @@
+site_name: Virtual Gym Docs
+theme: readthedocs
+nav:
+  - Project Requirements: index.md
+  - Software Design: software-design.md
+  - Project Management: project-management.md
+  - Test Documentation: test-documentation.md
+  - Deployment: deployment.md
+  - User Manual: user-manual.md

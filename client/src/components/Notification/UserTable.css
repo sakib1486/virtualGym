@@ -1,0 +1,23 @@
+.custom_user_table_table {
+  width: 100%;
+  border: 1px solid lightgrey;
+  background: white;
+  padding: 4px;
+}
+
+.custom_user_table_th {
+  border: 1px solid dimgray;
+  padding: 0.3rem;
+  background-color: lightgrey;
+  text-align: center;
+}
+
+.custom_user_table_td {
+  border: 1px solid dimgray;
+  padding: 0.3rem;
+  text-align: center;
+}
+
+.custom_user_table_th span {
+  font-size: 14pt;
+}

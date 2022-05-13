@@ -1,0 +1,8 @@
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: screen;
+  height: 100vh;
+}

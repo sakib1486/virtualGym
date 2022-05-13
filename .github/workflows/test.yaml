@@ -1,0 +1,42 @@
+name: Deployment testing
+
+on:
+  push:
+    branches: [ main, setup-ci ]
+  pull_request:
+    branches: [ main, setup-ci ]
+
+
+jobs:
+  test:
+    name: Tests
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:latest
+        env:
+          POSTGRES_DB: vg_db        
+          POSTGRES_PASSWORD: '123'
+          POSTGRES_USER: 'hero'
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Installing frontend dependencies
+        run: npm --prefix client install
+      
+      - name: Installing backend dependencies 
+        run: pip install -r server/requirements.txt
+
+      - name: Running backend tests
+        working-directory: server/virtualgym
+        run: python3 manage.py test
+
+      - name: Running frontend tests
+        run: npm --prefix client test 
